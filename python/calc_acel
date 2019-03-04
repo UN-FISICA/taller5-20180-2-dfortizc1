@@ -2,8 +2,11 @@
 import argparse
 from calc_mod import *
 
-
-
 if __name__ =="__main__":
-    print("***")
+   arguments = argparse.ArgumentParser()
+   arguments.add_argument("-imname", type=str, help="Ingresar el nombre de la imagen.")
+   arguments.add_argument("-hz", type=float, help="Ingresar la frecuencia con la que se tomaron las fotos (en Hz).")
+   arguments.add_argument("-dx", type=float, help="Ingresar el valor de un lado del pixel (en mm).")
+   args = arguments.parse_args()
+   print(calc(args.imname,args.hz,args.dx))
    
