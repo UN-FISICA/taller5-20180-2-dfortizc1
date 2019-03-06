@@ -86,3 +86,6 @@ def calc(image, hz, dx):
 
     return aceleration(centers, hz, dx)
     
+
+
+
